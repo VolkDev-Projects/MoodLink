@@ -1,2 +1,5 @@
 # MoodLink
- Aplicativo de conexões emocionais anônimas e seguras, com foco em saúde mental.
+
+MoodLink é um aplicativo focado em conexões emocionais anônimas e seguras, com ênfase em saúde mental e empatia entre pessoas.
+
+Em breve, mais detalhes sobre as tecnologias utilizadas e as funcionalidades da aplicação.
