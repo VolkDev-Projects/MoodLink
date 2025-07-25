@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "87598350115",
+    "project_id": "moodlink-e8404",
+    "storage_bucket": "moodlink-e8404.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:87598350115:android:a8e2740a3580ea4b275696",
+        "android_client_info": {
+          "package_name": "com.volkdev.moodlink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9EE-7cSWUgEUw-rspTSHO25-zifGBZgA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
