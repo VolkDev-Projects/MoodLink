@@ -21,6 +21,8 @@ import androidx.compose.ui.unit.sp
 import com.google.firebase.FirebaseApp
 import com.volkdev.moodlink.ui.theme.MoodLinkAppTheme
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.layout.ContentScale
 
@@ -76,16 +78,32 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 color = Color.White
             )
 
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(78.dp))
 
+            // botão estilizado
             Button(
                 onClick = {
                     val intent = Intent(context, SecondActivity::class.java)
                     context.startActivity(intent)
-                }
+                },
+                modifier = Modifier
+                    .fillMaxWidth(0.8f) // 80% da largura da tela
+                    .height(60.dp),     // altura maior
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0x800D47A1), // Azul com transparência
+                    contentColor = Color.White          // Texto branco
+                ),
+                shape = RoundedCornerShape(16.dp)       // Cantos arredondados
             ) {
-                Text(text = "Começar")
+                Text(
+                    text = "Começar",
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    // Aqui você pode trocar a fonte se tiver uma personalizada
+                )
             }
         }
     }
 }
+
+
