@@ -1,21 +1,28 @@
 package com.volkdev.moodlink
 
 import android.content.Intent
-import androidx.compose.material3.Button
-import androidx.compose.ui.platform.LocalContext
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.google.firebase.FirebaseApp
 import com.volkdev.moodlink.ui.theme.MoodLinkAppTheme
+import androidx.compose.foundation.Image
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.layout.ContentScale
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,13 +48,44 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     val context = LocalContext.current
-    Button(
-        onClick = {
-            val intent = Intent(context, SecondActivity::class.java)
-            context.startActivity(intent)
-        },
-        modifier = modifier
+
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
     ) {
-        Text(text = "Ir para a próxima tela")
+        // Imagem de fundo
+        Image(
+            painter = painterResource(id = R.drawable.primeira_tela),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
+
+        // Conteúdo por cima da imagem
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(32.dp),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = "Bem-vindo ao MoodLink!",
+                fontSize = 28.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.White
+            )
+
+            Spacer(modifier = Modifier.height(24.dp))
+
+            Button(
+                onClick = {
+                    val intent = Intent(context, SecondActivity::class.java)
+                    context.startActivity(intent)
+                }
+            ) {
+                Text(text = "Começar")
+            }
+        }
     }
 }
