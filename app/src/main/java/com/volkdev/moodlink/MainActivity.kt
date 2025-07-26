@@ -1,5 +1,8 @@
 package com.volkdev.moodlink
 
+import android.content.Intent
+import androidx.compose.material3.Button
+import androidx.compose.ui.platform.LocalContext
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -37,16 +40,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
+    val context = LocalContext.current
+    Button(
+        onClick = {
+            val intent = Intent(context, SecondActivity::class.java)
+            context.startActivity(intent)
+        },
         modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MoodLinkAppTheme {
-        Greeting("Android")
+    ) {
+        Text(text = "Ir para a próxima tela")
     }
 }
