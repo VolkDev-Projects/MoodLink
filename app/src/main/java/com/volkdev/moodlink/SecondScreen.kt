@@ -18,6 +18,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.volkdev.moodlink.ui.theme.MoodLinkAppTheme
+import android.util.Log
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+
 
 @Composable
 fun SecondScreen() {
@@ -62,7 +66,9 @@ fun SecondScreen() {
 
             if (selectedEmotion != null) {
                 Button(
-                    onClick = { /* Navegar ou salvar emoção */ },
+                    onClick = {
+                        saveEmotionToFirestore(selectedEmotion!!) // aqui chamamos a função
+                    },
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xAA2196F3)),
                     modifier = Modifier
                         .fillMaxWidth()
@@ -74,6 +80,23 @@ fun SecondScreen() {
         }
     }
 }
+fun saveEmotionToFirestore(emotion: String) {
+    val db = Firebase.firestore
+    val emotionData = hashMapOf(
+        "emotion" to emotion,
+        "timestamp" to System.currentTimeMillis()
+    )
+
+    db.collection("emotions")
+        .add(emotionData)
+        .addOnSuccessListener {
+            Log.d("Firestore", "Emoção '$emotion' salva com sucesso!")
+        }
+        .addOnFailureListener { e ->
+            Log.w("Firestore", "Erro ao salvar emoção", e)
+        }
+}
+
 
 @Composable
 fun EmotionButton(emoji: String, label: String, selected: String?, onSelect: (String) -> Unit) {
