@@ -41,8 +41,9 @@ class SecondActivity : ComponentActivity() {
     @Composable
     fun GreetingPreview2() {
         MoodLinkAppTheme {
-            Greeting2("Android")
-        }
+            Greeting2("Android") 
+
+        } 
     }
 }
 
