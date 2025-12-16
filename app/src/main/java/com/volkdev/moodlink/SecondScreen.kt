@@ -67,12 +67,14 @@ fun SecondScreen() {
             if (selectedEmotion != null) {
                 Button(
                     onClick = {
-                        saveEmotionToFirestore(selectedEmotion!!) // aqui chamamos a função
+                        saveEmotionToFirestore(selectedEmotion!!) 
+
+// aqui chamamos a função
                     },
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xAA2196F3)),
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(56.dp)
+                        .height(86.dp)
                 ) {
                     Text("Continuar", color = Color.White, fontSize = 18.sp)
                 }
