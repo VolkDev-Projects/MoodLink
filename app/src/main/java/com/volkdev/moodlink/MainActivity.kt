@@ -87,13 +87,13 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                     context.startActivity(intent)
                 },
                 modifier = Modifier
-                    .fillMaxWidth(0.8f) // 80% da largura da tela
-                    .height(60.dp),     // altura maior
+                    .fillMaxWidth(0.9f) // 90% da largura da tela
+                    .height(80.dp),     // altura maior
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(0x800D47A1), // Azul com transparência
                     contentColor = Color.White          // Texto branco
                 ),
-                shape = RoundedCornerShape(16.dp)       // Cantos arredondados
+                shape = RoundedCornerShape(22.dp)       // Cantos arredondados
             ) {
                 Text(
                     text = "Começar",
