@@ -1,4 +1,4 @@
-package com.volkdev.moodlink
+m package com.volkdev.moodlink
 
 import android.content.Intent
 import android.os.Bundle
@@ -67,12 +67,12 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(32.dp),
+                .padding(42.dp),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Bem-vindo ao MoodLink!",
+                text = "Bem-vindo",
                 fontSize = 33.sp
                 fontWeight = FontWeight.Bold,
                 color = Color.White
@@ -97,7 +97,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             ) {
                 Text(
                     text = "Começar",
-                    fontSize = 20.sp,
+                    fontSize = 20.sp
                     fontWeight = FontWeight.SemiBold,
                     // Aqui você pode trocar a fonte se tiver uma personalizada
                 )
