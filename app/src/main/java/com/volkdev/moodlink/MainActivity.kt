@@ -97,7 +97,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             ) {
                 Text(
                     text = "Começar",
-                    fontSize = 20.sp
+                    fontSize = 20.sp,
                     fontWeight = FontWeight.SemiBold,
                     // Aqui você pode trocar a fonte se tiver uma personalizada
                 )
