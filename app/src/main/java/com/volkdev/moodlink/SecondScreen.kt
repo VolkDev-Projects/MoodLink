@@ -76,7 +76,7 @@ fun SecondScreen() {
                         .fillMaxWidth()
                         .height(86.dp)
                 ) {
-                    Text("Continuar", color = Color.White, fontSize = 18.sp)
+                    Text("Continuar", color = Color.White, fontSize = 18.sp),
                 }
             }
         }
