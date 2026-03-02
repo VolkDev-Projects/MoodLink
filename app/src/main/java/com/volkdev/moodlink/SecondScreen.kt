@@ -69,7 +69,7 @@ fun SecondScreen() {
                     onClick = {
                         saveEmotionToFirestore(selectedEmotion!!) 
 
-// aqui chamamos a função
+// função
                     },
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xAA2196F3)),
                     modifier = Modifier
