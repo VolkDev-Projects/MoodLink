@@ -46,7 +46,7 @@ fun SecondScreen() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Como você está se sentindo hoje?",
+                text = "Como você está se sentindo?",
                 fontSize = 22.sp,
                 fontWeight = FontWeight.Bold,
                 color = Color.White
