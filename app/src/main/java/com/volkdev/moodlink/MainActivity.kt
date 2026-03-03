@@ -73,9 +73,9 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         ) {
             Text(
                 text = "Bem-vindo",
-                fontSize = 33.sp
+                fontSize = 54.sp
                 fontWeight = FontWeight.Bold,
-                color = Color.White
+                color = Color.white
             )
 
             Spacer(modifier = Modifier.height(78.dp))
@@ -97,7 +97,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             ) {
                 Text(
                     text = "Começar",
-                    fontSize = 20.sp,
+                    fontSize = 36.sp, 
                     fontWeight = FontWeight.SemiBold,
                     // Aqui você pode trocar a fonte se tiver uma personalizada
                 )
