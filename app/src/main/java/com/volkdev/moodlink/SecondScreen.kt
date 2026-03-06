@@ -32,7 +32,7 @@ fun SecondScreen() {
     ) {
         // Fundo com imagem
         Image(
-            painter = painterResource(id = R.drawable.primeira_tela), // salve como 'mood_background.png'
+            painter = painterResource(id = R.drawable.primeira_tela), // 'mood_background.png'
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
