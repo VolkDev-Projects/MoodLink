@@ -73,9 +73,9 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         ) {
             Text(
                 text = "Bem-vindo",
-                fontSize = 54.sp
+                fontSize = 33.sp, 
                 fontWeight = FontWeight.Bold,
-                color = Color.white 
+                color = Color.Black
             )
 
             Spacer(modifier = Modifier.height(78.dp))
@@ -87,11 +87,11 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                     context.startActivity(intent)
                 },
                 modifier = Modifier
-                    .fillMaxWidth(0.9f) // 90% da largura da tela
+                    .fillMaxWidth(0.7f) // 70% da largura da tela
                     .height(90.dp),     // altura maior da tela, 
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(0x800D47A1), // Azul transparência
-                    contentColor = Color.White          // Texto branco
+                    contentColor = Color.Blue,          // Texto branco
                 ),
                 shape = RoundedCornerShape(46.dp)       // Cantos arredondados
             ) {
