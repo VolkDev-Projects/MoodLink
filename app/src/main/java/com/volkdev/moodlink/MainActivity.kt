@@ -75,7 +75,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 text = "Bem-vindo",
                 fontSize = 54.sp
                 fontWeight = FontWeight.Bold,
-                color = Color.white
+                color = Color.white 
             )
 
             Spacer(modifier = Modifier.height(78.dp))
@@ -88,7 +88,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 },
                 modifier = Modifier
                     .fillMaxWidth(0.9f) // 90% da largura da tela
-                    .height(90.dp),     // altura maior
+                    .height(90.dp),     // altura maior da tela, 
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(0x800D47A1), // Azul transparência
                     contentColor = Color.White          // Texto branco
@@ -96,7 +96,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                 shape = RoundedCornerShape(46.dp)       // Cantos arredondados
             ) {
                 Text(
-                    text = "Começar",
+                    text = "Começar", 
                     fontSize = 36.sp, 
                     fontWeight = FontWeight.SemiBold,
                     // fonte personalizada 
