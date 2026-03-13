@@ -91,7 +91,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
                     .height(90.dp),     // altura maior da tela, 
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(0x800D47A1), // Azul transparência
-                    contentColor = Color.Blue,          // Texto azul padrão 
+                    contentColor = Color.Blue,          // Texto azul padrão // 1,5% 
                 ),
                 shape = RoundedCornerShape(46.dp)       // Cantos arredondados
             ) {
