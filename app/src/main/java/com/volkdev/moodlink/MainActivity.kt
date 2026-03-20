@@ -28,9 +28,9 @@ import androidx.compose.ui.layout.ContentScale
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        super.onCreate(savedInstanceState)"
 
-        // Inicializa o Firebase
+        // Inico do firebaae
         FirebaseApp.initializeApp(this)
 
         enableEdgeToEdge()
@@ -80,7 +80,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
             Spacer(modifier = Modifier.height(78.dp))
 
-            // botão estilizado
+            // botao estilizado 
             Button(
                 onClick = {
                     val intent = Intent(context, SecondActivity::class.java)
