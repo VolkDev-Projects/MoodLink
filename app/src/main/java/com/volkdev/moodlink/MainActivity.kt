@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)"
 
-        // Inico do fire base
+        //inicio do fire base
         FirebaseApp.initializeApp(this)
 
         enableEdgeToEdge()
