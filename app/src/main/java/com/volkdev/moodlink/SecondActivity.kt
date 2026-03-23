@@ -22,7 +22,7 @@ class SecondActivity : ComponentActivity() {
             MoodLinkAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Box(modifier = Modifier.padding(innerPadding)) {
-                        SecondScreen()
+                        SecondScreen() 
                     }
                 }
             }
